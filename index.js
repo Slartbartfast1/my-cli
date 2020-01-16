@@ -12,21 +12,20 @@ inquirer.prompt(
       default: false
     }
   ]
-)
-  .then(
-    answers => {
-      if (answers.OK === true) {
-        const spinner = ora('正在下载').start();
-        download(
-          'flippidippi/download-git-repo-fixture', 'test/tmp', function (err) {
-              err ?
-                spinner.succeed(chalk.green('下载成功'))
-              :
-                spinner.fail(chalk.red('下载失败'))
-          }
-        )
-      }
+).then(
+  answers => {
+    if (answers.OK === true) {
+      const spinner = ora('正在下载').start();
+      download(
+        'flippidippi/download-git-repo-fixture', 'test/tmp', err => {
+          err ?
+            spinner.succeed(chalk.green('下载成功'))
+            :
+            spinner.fail(chalk.red('下载失败'))
+        }
+      )
     }
-  );
+  }
+);
 
 
