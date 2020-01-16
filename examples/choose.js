@@ -1,7 +1,7 @@
-const chalk = require('chalk'); // https://www.npmjs.com/package/chalk
-const inquirer = require('inquirer'); // https://www.npmjs.com/package/inquirer
-const download = require('download-git-repo');// https://www.npmjs.com/package/download-git-repo
-const ora = require('ora');// https://www.npmjs.com/package/ora
+const chalk = require('chalk'); // 上色 https://www.npmjs.com/package/chalk
+const inquirer = require('inquirer'); // 交互 https://www.npmjs.com/package/inquirer
+const download = require('download-git-repo');// 下载工具 https://www.npmjs.com/package/download-git-repo
+const ora = require('ora');// 转圈圈 https://www.npmjs.com/package/ora
 
 inquirer.prompt(
   [
